@@ -41,10 +41,9 @@ A high-performance rhythm game bot for NIKKE: Goddess of Victory's Tracing The S
 
 ### Option 1: Download Pre-compiled Binary
 
-1. Download `color_bot.exe` from [Releases](../../releases)
-2. Run `color_bot.exe` (will request admin privileges)
-3. Press `F9` to calibrate
-4. Press `F8` to start/stop
+1. Run `color_bot.exe` (will request admin privileges)
+2. Press `F9` to calibrate
+3. Press `F8` to start/stop
 
 ### Option 2: Compile from Source
 
