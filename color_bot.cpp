@@ -73,6 +73,7 @@ static int   cfg_scan_half        = 6;
 #define TARGET_FPS         300.0
 #define GREEN_HOLD_GRACE   0.02
 #define PURPLE_HOLD_GRACE  0.02
+#define GOLD_HOLD_GRACE    0.04
 #define KEY_REPRESS_COOLDOWN 0.01
 
 // Keys: d f j k b a l
@@ -404,6 +405,7 @@ static void bot_loop() {
     // State
     bool  in_hold[NUM_KEYS]       = {};
     double white_last_seen[4]     = {-1,-1,-1,-1};
+    double gold_last_seen         = -1;
     double green_last_seen        = -1;
     double purple_last_seen       = -1;
 
@@ -481,10 +483,20 @@ static void bot_loop() {
                     to_press[np++] = KEY_B;
                     in_hold[KEY_B] = true;
                 }
+                gold_last_seen = now;
             } else {
                 if (held[KEY_B]) {
-                    to_release[nr++] = KEY_B;
-                    in_hold[KEY_B]   = false;
+                    if (in_hold[KEY_B]) {
+                        if (gold_last_seen >= 0 && now - gold_last_seen > GOLD_HOLD_GRACE) {
+                            to_release[nr++] = KEY_B;
+                            in_hold[KEY_B]   = false;
+                            gold_last_seen   = -1;
+                        }
+                    } else {
+                        to_release[nr++] = KEY_B;
+                        in_hold[KEY_B]   = false;
+                        gold_last_seen   = -1;
+                    }
                 }
             }
         }
