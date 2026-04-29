@@ -73,7 +73,7 @@ static int   cfg_scan_half        = 6;
 #define TARGET_FPS         300.0
 #define GREEN_HOLD_GRACE   0.02
 #define PURPLE_HOLD_GRACE  0.02
-#define GOLD_HOLD_GRACE    0.04
+#define GOLD_HOLD_GRACE    0.02
 #define KEY_REPRESS_COOLDOWN 0.01
 
 // Keys: d f j k b a l
