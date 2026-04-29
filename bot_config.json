@@ -1,0 +1,12 @@
+{
+    "hit_zone_y": 741,
+    "lane_centers_x": [758, 881, 1004, 1126],
+    "lane_hold_x": [717, 839, 963, 1085],
+    "lane_keys": ["d", "f", "j", "k"],
+    "green_x": 723,
+    "purple_x": 1161,
+    "gold_x": 1126,
+    "green_tap_x": 881,
+    "purple_tap_x": 1004,
+    "special_scan_half": 24
+}
