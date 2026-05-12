@@ -1,4 +1,4 @@
-# Nikke TTS Color Bot
+# Nikke T.T. Star Color Bot
 
 <p align="center">
   <img src="tts.png" alt="Nikke TTS Bot" width="300"/>
